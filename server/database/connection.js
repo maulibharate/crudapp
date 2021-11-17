@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-
+const DATABASE = process.env.DATABASE || 'mongodb+srv://jack:jack@cluster0.txbbl.mongodb.net/CRUD?retryWrites=true&w=majority'
 const connectDB = async () => {
     try {
-        mongoose.connect(process.env.DATABASE, {
+        mongoose.connect(DATABASE, {
             useNewUrlParser: true,
             // useCreateIndex: true,
             useUnifiedTopology: true,

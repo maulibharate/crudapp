@@ -13,7 +13,7 @@ $('#update_user').submit(function(event){
     $.map(unindexed_array, function(n, i) {
         data[n['name']] = n['value']
     })
-    console.log(PORT, "@@@@@@@@@@@")
+    
     var request = {
         "url" : `http://localhost:${PORT}/api/users/${data.id}`,
         "method": "PUT",
